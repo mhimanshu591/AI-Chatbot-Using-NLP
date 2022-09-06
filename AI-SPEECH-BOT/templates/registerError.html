@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %}Register Error{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">Register Error</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Dashboard</a></li>
+  <li class="breadcrumb-item active">Register Error</li>
+</ol>
+<form>
+    <div class="form-group">
+      <label for="querryInput">Enter Querry</label>
+      <input type="text" class="form-control" id="querryInput" placeholder="Enter your Querry here" onfocus="this.value=''"  required>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="registerError()">Register</button>
+</form>
+{% endblock content %}

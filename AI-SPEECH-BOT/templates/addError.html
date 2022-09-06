@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block title %}Add New Error{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">Add Error</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Dashboard</a></li>
+  <li class="breadcrumb-item active">Add New Error</li>
+</ol>
+<form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputTag">Tag Name</label>
+        <input type="text" class="form-control" id="inputTag" onfocus="this.value=''" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputStatus">Status</label>
+        <select id="inputStatus" class="form-control">
+          <option selected>0</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPatterns">Patterns</label>
+      <input type="text" class="form-control" id="inputPatterns" onfocus="this.value=''" required>
+    </div>
+    <div class="form-group">
+      <label for="inputResponses">Responses</label>
+      <input type="text" class="form-control" id="inputResponses" onfocus="this.value=''" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="inputContext_set">Context_set</label>
+        <input type="text" class="form-control" id="inputContext_set" onfocus="this.value=''" >
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="addEntryServer()">Add</button>
+</form>
+{% endblock content %}
